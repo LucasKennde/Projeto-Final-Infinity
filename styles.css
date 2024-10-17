@@ -1,122 +1,84 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-}
-
-.container {
-  width: 100%;
-  max-width: 600px;
-  margin: 50px auto;
-  background-color: #fff;
+  background-color: #121212;
+  color: #ffffff;
+  margin: 0;
   padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
 }
 
-h1 {
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 24px;
-  color: #333;
-}
-
-table.calendar {
-  width: 100%;
-  border-collapse: collapse;
+#app {
+  max-width: 800px;
   margin: 0 auto;
 }
 
-table.calendar th, table.calendar td {
-  width: 14.28%;
-  padding: 10px;
-  text-align: center;
-  border: 1px solid #ccc;
+.tela {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
 }
 
-table.calendar th {
-  background-color: #4CAF50;
-  color: white;
+h1 {
+  color: #bb86fc;
 }
 
-table.calendar td {
-  height: 50px;
-  vertical-align: middle;
+button {
+  background-color: #bb86fc;
+  color: #000000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
   cursor: pointer;
 }
 
-table.calendar td.available {
-  background-color: #4CAF50;
-  color: white;
+button:hover {
+  background-color: #3700b3;
+  color: #ffffff;
+}
+
+#calendario-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#dias-semana, #calendario {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+#dias-semana div {
+  background-color: #3700b3;
+  padding: 10px;
+  text-align: center;
   font-weight: bold;
 }
 
-table.calendar td.available:hover {
-  background-color: #45a049;
-}
-
-table.calendar td:not(.available) {
-  background-color: #f4f4f4;
-  color: #999;
-  cursor: not-allowed;
-}
-
-section {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Para centralizar verticalmente */
-}
-
-
-.modal {
-  width: 100%;
-  max-width: 600px;
-  margin: 50px auto;
-  background-color: #fff;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-}
-
-.modal-conteudo {
+.dia {
+  background-color: #2c2c2c;
+  padding: 10px;
   text-align: center;
-  margin-bottom: 20px;
-  font-size: 24px;
-  color: #333;
-}
-.modal-agendamento{
-  display: flex; /* Para centrar o conteúdo do modal */
-  justify-content: center;
-  align-items: center;
-  width: 400px; /* Largura do modal */
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
-.modal-confimado{
-  text-align: left;
+.dia:hover {
+  background-color: #3700b3;
 }
 
-h2 {
-  margin-bottom: 15px;
-  color: #333;
+.dia.selecionado {
+  background-color: #bb86fc;
+  color: #000000;
 }
 
-.modal-link {
-  color: #4CAF50;
+.dia.disponivel {
+  border: 2px solid #03dac6;
+}
+
+a {
+  color: #03dac6;
   text-decoration: none;
 }
 
-.modal-link:hover {
+a:hover {
   text-decoration: underline;
 }
